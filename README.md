@@ -1,86 +1,282 @@
-<h1 align="center">♨️ Node CLI Boilerplate</h1>
+<h1 align="center">♨️ Bishop CLI</h1>
+
+<p align="center">
+  <strong>
+    A robust, flexible, and highly extensible CLI solution that streamlines the process of creating and maintaining Next.js applications, React component libraries, monorepos, and beyond. Bishop CLI empowers developers with modern tooling and best practices out-of-the-box, enabling you to focus on building exceptional software.
+  </strong>
+</p>
 
 <div align="center">
-  <p>
-    A Node.js boilerplate with opinionated setup to help you kickstart your own CLI.
-  </p>
   <img src="https://img.shields.io/github/license/boilertown/node-cli-boilerplate?style=flat-square" alt="MIT license" >
 </div>
 
-## The Setup
+---
 
-- [TypeScript][typescript-url]
-- Linting with [Eslint][eslint-url] and code formatting with [Prettier][prettier-url]
-- Conventional commit messages with [Commitlint][commitlint-url]
-- Build with [tsup][tsup-url]
-- [Vitest][vitest-url] for Unit test
-- Automated release with [changesets][changesets-url]
+## Introduction
 
-## Get Started
+Modern web development often involves assembling a complex toolchain—linters, formatters, bundlers, testing frameworks, CI/CD pipelines, and more. **Bishop CLI** removes this overhead by offering a single command-line interface that scaffolds fully integrated projects and packages, ensuring consistency, maintainability, and a professional, production-ready setup from day one.
 
-- Use [Boilertown](https://github.com/boilertown/create-boilertown) CLI.
+With Bishop CLI, you can quickly spin up:
 
-  ```sh
-  # npm
-  npm create boilertown@latest -- -b node-cli-boilerplate
+- Next.js applications leveraging the latest routing patterns
+- React libraries packaged with Rollup, tsup, or Vite
+- Monorepos optimized with Turborepo and advanced build configurations
+- SaaS templates equipped with authentication, payments, and team management
 
-  # yarn
-  yarn create boilertown -b node-cli-boilerplate
+All this is done while incorporating TypeScript, ESLint, Prettier, Commitlint, and other top-tier tools to enhance developer productivity and code quality.
 
-  # pnpm
-  pnpm create boilertown -b node-cli-boilerplate
+## Why Bishop CLI?
 
-  # bun
-  bun create boilertown/node-cli-boilerplate [cli-name]
-  ```
+1. **Speed & Efficiency**:  
+   Save hours on setup. With a single command, you'll get a fully configured project that’s ready to develop, test, and deploy.
+2. **Consistency Across Projects**:  
+   Establish a unified development experience for your entire team. Bishop CLI ensures every new project adheres to the same standards and structure, minimizing onboarding complexity.
+3. **Best Practices Built-In**:  
+   Benefit from industry best practices—clean code architecture, code quality automation, type safety, and sensible defaults—without manually researching and configuring them yourself.
+4. **Extensibility & Customization**:  
+   While Bishop CLI offers smart defaults, it doesn’t lock you in. Modify configurations, swap templates, and integrate additional tooling as your project grows.
 
-- Click the green "Use this template" button to generate a new repository with the same structure and files.
+## Key Features
 
-  <img src="https://docs.github.com/assets/cb-36544/images/help/repository/use-this-template-button.png" alt="Use this template button" width="500">
+- **Multiple Project Archetypes**:  
+  Target a broad range of development scenarios:
 
-  [Ref: Github Docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+  - Next.js Applications (App & Pages Routers)
+  - React Component & UI Libraries
+  - TypeScript Utility Packages
+  - Full-Stack Monorepos with seamless integrations
+  - SaaS Boilerplates designed for production
 
-## Development
+- **Modern, Reliable Tooling**:  
+  Each generated project comes preconfigured with:
 
-- Run the app in development mode:
+  - [**TypeScript**][typescript-url]: Strongly typed code for better reliability and maintainability.
+  - [**ESLint**][eslint-url] & [**Prettier**][prettier-url]: Enforced code style and linting to maintain a clean codebase.
+  - [**Commitlint**][commitlint-url]: Enforce conventional commit messages, making your commit history standardized and easier to parse.
+  - [**tsup**][tsup-url]: Ship optimized builds for libraries and packages, ensuring fast bundle times and minimal configuration.
+  - [**Vitest**][vitest-url]: A blazing-fast testing framework, integrated by default to keep your code quality in check.
+  - [**Changesets**][changesets-url]: Automate versioning, changelogs, and publishing to npm with ease.
 
-  ```sh
-  pnpm dev
-  ```
+- **Highly Scalable Structures**:  
+  Bishop CLI’s monorepo setups integrate seamlessly with tools like Turborepo, enabling advanced caching, parallelization, and code sharing between multiple packages and applications.
 
-- Build the app:
+- **Production-Ready SaaS Templates**:  
+  Get a jumpstart on building subscription-based services with authentication, payment workflows, and team management out-of-the-box, so you can focus on crafting your unique value proposition.
 
-  ```sh
-  pnpm build
-  ```
+## Quick Start
 
-- Create changeset:
+Install Bishop CLI globally using the package manager of your choice:
 
-  ```sh
-  pnpm changeset
-  ```
+```sh
+# Using npm
+npm install -g solomonai-cli
 
-## Release & Publish app
+# Using yarn
+yarn global add solomonai-cli
 
-This boilerplate uses [changesets][changesets-url] to automatically generate `CHANGELOG`, create releases and publish to NPM registry via GitHub Actions. You can see action details at [release.yml](/.github/workflows//release.yml).
+# Using pnpm
+pnpm add -g solomonai-cli
 
-To automating publish your app, follow these steps:
+# Using bun
+bun add -g solomonai-cli
+```
 
-- Create a `NPM_TOKEN`. [See this article for more details](https://docs.npmjs.com/creating-and-viewing-access-tokens). Make sure the type of access token is **Automation**.
+After installation, run `solomonai-cli --help` to discover available commands and options.
 
-- [Follow this instruction](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) to add the created token to your GitHub Actions secrets. Name of the secret is `NPM_TOKEN`.
+## Core Commands & Workflows
 
-- Install [changeset bot](https://github.com/apps/changeset-bot).
+### Create a Next.js Application
 
-- [Adding changeset and commit](https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md#i-am-in-a-single-package-repository).
+Spinning up a Next.js application is a breeze—choose between the modern App Router or the legacy Pages Router:
 
-**P/S**: Remember to check the `Allow GitHub Actions to create and approve pull requests` in your repo Settings > Actions > General & scroll to Workflow permissions.
+```sh
+# App Router (default)
+solomonai-cli next my-app
+
+# Pages Router
+solomonai-cli next my-app -t pages
+
+# Full-stack T3 Integration (Next.js, tRPC, Prisma, Tailwind)
+solomonai-cli next my-app -t fullstack
+```
+
+These commands will scaffold a fully configured Next.js application with TypeScript, ESLint, Prettier, testing tools, and more. You’ll start coding on a solid foundation, complete with best practices already baked in.
+
+### Generate a React Library
+
+Building reusable UI components or utilities? Bishop CLI supports multiple configurations for React libraries, ensuring compatibility with various ecosystems:
+
+```sh
+# Rollup-based React library (default)
+solomonai-cli lib my-lib
+
+# React library with Vite
+solomonai-cli lib my-components -t vite
+
+# TypeScript utility library with tsup
+solomonai-cli lib utils -t tsup
+```
+
+These libraries come ready with testing, linting, and a sensible folder structure. You can immediately focus on writing components or utilities rather than wrangling build scripts.
+
+### Establish a Monorepo
+
+Create a well-structured monorepo that scales with your organization’s growth. Bishop CLI sets up Turborepo, workspaces, shared tooling, and a streamlined developer experience:
+
+```sh
+# Production-grade Next.js monorepo
+solomonai-cli monorepo my-project
+
+# SaaS-focused monorepo with authentication, billing, and more
+solomonai-cli monorepo my-saas -t saasfly
+
+# Enterprise-oriented monorepo for large-scale applications
+solomonai-cli monorepo my-enterprise -t enterprise
+```
+
+Monorepos generated by Bishop CLI come equipped with integrated testing, linting, and CI/CD workflows, ensuring every new package or application inside your workspace meets the same high standards.
+
+### Add Components & Packages to Existing Projects
+
+As your monorepo or project evolves, easily add new components, packages, and applications with consistent conventions:
+
+```sh
+# Generate a new TypeScript package
+solomonai-cli generate package utils
+
+# Generate a React package pre-configured with Storybook
+solomonai-cli generate react-package ui
+
+# Add a new Next.js application within a monorepo
+solomonai-cli generate app admin
+```
+
+These commands ensure your new additions seamlessly integrate with your existing codebase, minimizing setup and configuration overhead.
+
+## Advanced Configuration & Customization
+
+While Bishop CLI aims for sensible defaults, you retain full control. Projects are scaffolding templates that you can freely modify. Want to swap out ESLint configs, change the testing framework, or integrate a new CI pipeline? All generated files are yours to adjust. Bishop CLI sets the stage, and you direct the play.
+
+## Development, Testing & Building
+
+For those contributing to Bishop CLI itself or experimenting locally:
+
+```sh
+# Start Bishop CLI in development mode
+pnpm dev
+
+# Build the CLI for production
+pnpm build
+
+# Create a changeset for versioning & releasing
+pnpm changeset
+```
+
+By harnessing Changesets, you can manage versions, generate changelogs, and prepare for npm releases cleanly and efficiently.
+
+## Automating Releases & Publishing
+
+Bishop CLI leverages [changesets][changesets-url] for smart versioning and publishing workflows:
+
+1. Create an **Automation**-enabled `NPM_TOKEN`. [Read the docs](https://docs.npmjs.com/creating-and-viewing-access-tokens)
+2. Store this token as `NPM_TOKEN` in your GitHub Actions secrets. [Instructions](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
+3. Install the [changeset bot](https://github.com/apps/changeset-bot) to manage PRs and version bumps.
+4. Enable GitHub Actions to create and approve PRs in your repository’s settings.
+
+Once set up, releasing new versions and publishing packages to npm becomes a largely automated process, freeing up time for feature development and improvements.
 
 ## Contributing
 
-**node-cli-boilerplate** ❤️ your contributions. If you have any ideas, suggestions, fixes, feel free to contribute.
+We warmly welcome contributions to Bishop CLI. If you have an idea, encounter an issue, or want to improve existing functionality, please consider contributing:
 
-[boilertown-url]: https://github.com/boilertown
+1. Fork the repository to your GitHub account.
+2. Create a feature branch: `git checkout -b feature/amazing-feature`.
+3. Commit your changes following conventional commit standards:  
+   `git commit -m 'feat: add amazing feature'`
+4. Push your branch: `git push origin feature/amazing-feature`.
+5. Open a Pull Request and detail your changes and rationale.
+
+Our community values code quality, maintainability, and transparency. Before submitting your PR, ensure your code passes all tests, linters, and follows the existing conventions.
+
+## Additional Examples & Use Cases
+
+### Next.js Applications
+
+```sh
+# Basic Next.js app with App Router
+solomonai-cli next my-app
+
+# Enterprise-grade Next.js setup with authentication, database integration, and robust testing
+solomonai-cli next my-enterprise -t enterprise
+
+# Professional admin dashboard with Chakra UI integration
+solomonai-cli next my-dashboard -t horizonUI
+
+# Full-stack T3 stack: Next.js, tRPC, Prisma, and Tailwind
+solomonai-cli next my-saas -t fullstack
+```
+
+### React Libraries
+
+```sh
+# Simple React component library with Rollup
+solomonai-cli lib my-components
+
+# Zero-config TypeScript utility library with tsup
+solomonai-cli lib utils -t tsup
+
+# Production-grade TypeScript library with CI/CD, automated releases, Jest, and docs
+solomonai-cli lib core -t typescript
+```
+
+### Monorepo Templates
+
+```sh
+# Next.js monorepo with Turborepo and shared configuration
+solomonai-cli monorepo my-workspace
+
+# Full SaaS starter with auth, payments, and team management
+solomonai-cli monorepo my-saas -t saasfly
+
+# Enterprise monorepo with AWS architecture and best practices
+solomonai-cli monorepo my-enterprise -t saasBoilerplate
+
+# Open-source SaaS template featuring Wasp for rapid iteration
+solomonai-cli monorepo my-project -t openSaas
+```
+
+### Generating Components & Packages Within a Monorepo
+
+```sh
+# Create a new TypeScript package under packages/
+solomonai-cli generate package logger
+
+# Spin up a React package with Storybook support under packages/
+solomonai-cli generate react-package ui
+
+# Add a new Next.js application in apps/
+solomonai-cli generate app admin
+```
+
+## Pro Tips
+
+- Use the `-v` (verbose) flag when executing commands for detailed logs and insights during project creation.
+- All templates are TypeScript-first, ensuring type safety from the get-go.
+- Each generated project or package includes a well-integrated testing environment to promote quality and stability.
+- Documentation and example configs are included in most templates, providing guidance on advanced configuration and customization.
+- Run `--help` on any Bishop CLI command for a full breakdown of available options:
+
+  ```sh
+  solomonai-cli next --help
+  solomonai-cli lib --help
+  solomonai-cli monorepo --help
+  solomonai-cli generate --help
+  ```
+
+---
+
+**Embrace a simpler, more consistent development workflow.** With Bishop CLI, you’ll spend less time on configuration and tooling setup, and more time building the solutions that matter.
+
 [typescript-url]: https://www.typescriptlang.org
 [eslint-url]: https://eslint.org
 [commitlint-url]: https://github.com/conventional-changelog/commitlint
