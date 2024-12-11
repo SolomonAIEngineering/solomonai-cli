@@ -1,7 +1,7 @@
 import figlet from 'figlet';
 
 export const renderTitle = () => {
-	const text = figlet.textSync('Bishop CLI', {
+	const text = figlet.textSync('Solomon CLI', {
 		font: 'Larry 3D',
 		horizontalLayout: 'default',
 		verticalLayout: 'default',

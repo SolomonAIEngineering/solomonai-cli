@@ -1,8 +1,8 @@
-<h1 align="center">♨️ Bishop CLI</h1>
+<h1 align="center">♨️ Solomon CLI</h1>
 
 <p align="center">
   <strong>
-    A robust, flexible, and highly extensible CLI solution that streamlines the process of creating and maintaining Next.js applications, React component libraries, monorepos, and beyond. Bishop CLI empowers developers with modern tooling and best practices out-of-the-box, enabling you to focus on building exceptional software.
+    A robust, flexible, and highly extensible CLI solution that streamlines the process of creating and maintaining Next.js applications, React component libraries, monorepos, and beyond. Solomon CLI empowers developers with modern tooling and best practices out-of-the-box, enabling you to focus on building exceptional software.
   </strong>
 </p>
 
@@ -14,9 +14,9 @@
 
 ## Introduction
 
-Modern web development often involves assembling a complex toolchain—linters, formatters, bundlers, testing frameworks, CI/CD pipelines, and more. **Bishop CLI** removes this overhead by offering a single command-line interface that scaffolds fully integrated projects and packages, ensuring consistency, maintainability, and a professional, production-ready setup from day one.
+Modern web development often involves assembling a complex toolchain—linters, formatters, bundlers, testing frameworks, CI/CD pipelines, and more. **Solomon CLI** removes this overhead by offering a single command-line interface that scaffolds fully integrated projects and packages, ensuring consistency, maintainability, and a professional, production-ready setup from day one.
 
-With Bishop CLI, you can quickly spin up:
+With Solomon CLI, you can quickly spin up:
 
 - Next.js applications leveraging the latest routing patterns
 - React libraries packaged with Rollup, tsup, or Vite
@@ -25,16 +25,16 @@ With Bishop CLI, you can quickly spin up:
 
 All this is done while incorporating TypeScript, ESLint, Prettier, Commitlint, and other top-tier tools to enhance developer productivity and code quality.
 
-## Why Bishop CLI?
+## Why Solomon CLI?
 
 1. **Speed & Efficiency**:  
    Save hours on setup. With a single command, you'll get a fully configured project that’s ready to develop, test, and deploy.
 2. **Consistency Across Projects**:  
-   Establish a unified development experience for your entire team. Bishop CLI ensures every new project adheres to the same standards and structure, minimizing onboarding complexity.
+   Establish a unified development experience for your entire team. Solomon CLI ensures every new project adheres to the same standards and structure, minimizing onboarding complexity.
 3. **Best Practices Built-In**:  
    Benefit from industry best practices—clean code architecture, code quality automation, type safety, and sensible defaults—without manually researching and configuring them yourself.
 4. **Extensibility & Customization**:  
-   While Bishop CLI offers smart defaults, it doesn’t lock you in. Modify configurations, swap templates, and integrate additional tooling as your project grows.
+   While Solomon CLI offers smart defaults, it doesn’t lock you in. Modify configurations, swap templates, and integrate additional tooling as your project grows.
 
 ## Key Features
 
@@ -58,14 +58,14 @@ All this is done while incorporating TypeScript, ESLint, Prettier, Commitlint, a
   - [**Changesets**][changesets-url]: Automate versioning, changelogs, and publishing to npm with ease.
 
 - **Highly Scalable Structures**:  
-  Bishop CLI’s monorepo setups integrate seamlessly with tools like Turborepo, enabling advanced caching, parallelization, and code sharing between multiple packages and applications.
+  Solomon CLI’s monorepo setups integrate seamlessly with tools like Turborepo, enabling advanced caching, parallelization, and code sharing between multiple packages and applications.
 
 - **Production-Ready SaaS Templates**:  
   Get a jumpstart on building subscription-based services with authentication, payment workflows, and team management out-of-the-box, so you can focus on crafting your unique value proposition.
 
 ## Quick Start
 
-Install Bishop CLI globally using the package manager of your choice:
+Install Solomon CLI globally using the package manager of your choice:
 
 ```sh
 # Using npm
@@ -104,7 +104,7 @@ These commands will scaffold a fully configured Next.js application with TypeScr
 
 ### Generate a React Library
 
-Building reusable UI components or utilities? Bishop CLI supports multiple configurations for React libraries, ensuring compatibility with various ecosystems:
+Building reusable UI components or utilities? Solomon CLI supports multiple configurations for React libraries, ensuring compatibility with various ecosystems:
 
 ```sh
 # Rollup-based React library (default)
@@ -121,7 +121,7 @@ These libraries come ready with testing, linting, and a sensible folder structur
 
 ### Establish a Monorepo
 
-Create a well-structured monorepo that scales with your organization’s growth. Bishop CLI sets up Turborepo, workspaces, shared tooling, and a streamlined developer experience:
+Create a well-structured monorepo that scales with your organization’s growth. Solomon CLI sets up Turborepo, workspaces, shared tooling, and a streamlined developer experience:
 
 ```sh
 # Production-grade Next.js monorepo
@@ -134,7 +134,7 @@ solomonai-cli monorepo my-saas -t saasfly
 solomonai-cli monorepo my-enterprise -t enterprise
 ```
 
-Monorepos generated by Bishop CLI come equipped with integrated testing, linting, and CI/CD workflows, ensuring every new package or application inside your workspace meets the same high standards.
+Monorepos generated by Solomon CLI come equipped with integrated testing, linting, and CI/CD workflows, ensuring every new package or application inside your workspace meets the same high standards.
 
 ### Add Components & Packages to Existing Projects
 
@@ -155,14 +155,14 @@ These commands ensure your new additions seamlessly integrate with your existing
 
 ## Advanced Configuration & Customization
 
-While Bishop CLI aims for sensible defaults, you retain full control. Projects are scaffolding templates that you can freely modify. Want to swap out ESLint configs, change the testing framework, or integrate a new CI pipeline? All generated files are yours to adjust. Bishop CLI sets the stage, and you direct the play.
+While Solomon CLI aims for sensible defaults, you retain full control. Projects are scaffolding templates that you can freely modify. Want to swap out ESLint configs, change the testing framework, or integrate a new CI pipeline? All generated files are yours to adjust. Solomon CLI sets the stage, and you direct the play.
 
 ## Development, Testing & Building
 
-For those contributing to Bishop CLI itself or experimenting locally:
+For those contributing to Solomon CLI itself or experimenting locally:
 
 ```sh
-# Start Bishop CLI in development mode
+# Start Solomon CLI in development mode
 pnpm dev
 
 # Build the CLI for production
@@ -176,7 +176,7 @@ By harnessing Changesets, you can manage versions, generate changelogs, and prep
 
 ## Automating Releases & Publishing
 
-Bishop CLI leverages [changesets][changesets-url] for smart versioning and publishing workflows:
+Solomon CLI leverages [changesets][changesets-url] for smart versioning and publishing workflows:
 
 1. Create an **Automation**-enabled `NPM_TOKEN`. [Read the docs](https://docs.npmjs.com/creating-and-viewing-access-tokens)
 2. Store this token as `NPM_TOKEN` in your GitHub Actions secrets. [Instructions](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
@@ -187,7 +187,7 @@ Once set up, releasing new versions and publishing packages to npm becomes a lar
 
 ## Contributing
 
-We warmly welcome contributions to Bishop CLI. If you have an idea, encounter an issue, or want to improve existing functionality, please consider contributing:
+We warmly welcome contributions to Solomon CLI. If you have an idea, encounter an issue, or want to improve existing functionality, please consider contributing:
 
 1. Fork the repository to your GitHub account.
 2. Create a feature branch: `git checkout -b feature/amazing-feature`.
@@ -264,7 +264,7 @@ solomonai-cli generate app admin
 - All templates are TypeScript-first, ensuring type safety from the get-go.
 - Each generated project or package includes a well-integrated testing environment to promote quality and stability.
 - Documentation and example configs are included in most templates, providing guidance on advanced configuration and customization.
-- Run `--help` on any Bishop CLI command for a full breakdown of available options:
+- Run `--help` on any Solomon CLI command for a full breakdown of available options:
 
   ```sh
   solomonai-cli next --help
@@ -275,7 +275,7 @@ solomonai-cli generate app admin
 
 ---
 
-**Embrace a simpler, more consistent development workflow.** With Bishop CLI, you’ll spend less time on configuration and tooling setup, and more time building the solutions that matter.
+**Embrace a simpler, more consistent development workflow.** With Solomon CLI, you’ll spend less time on configuration and tooling setup, and more time building the solutions that matter.
 
 [typescript-url]: https://www.typescriptlang.org
 [eslint-url]: https://eslint.org

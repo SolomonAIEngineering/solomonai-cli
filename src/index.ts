@@ -16,7 +16,7 @@ import {
 	const program = new Command();
 
 	program
-		.name('Bishop CLI')
+		.name('Solomon CLI')
 		.description(
 			'⚡️ Scaffold a nextjs project, react packages, component library, and more.',
 		)
