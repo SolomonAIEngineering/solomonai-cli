@@ -3,11 +3,16 @@ import { Command } from 'commander';
 import { packageJSON } from 'utils/packageJson.ts';
 import { renderTitle } from 'utils/renderTitle.ts';
 import {
-	generateCommand,
-	initCommand,
-	libraryCommand,
-	monorepoCommand,
-	nextCommand,
+	budgetCommand,
+	cashflowCommand,
+	configCommand,
+	dashboardCommand,
+	expenseCommand,
+	invoiceCommand,
+	payrollCommand,
+	reconcileCommand,
+	skaffoldCommand,
+	storageCommand,
 } from './commands';
 
 (async () => {
@@ -26,11 +31,15 @@ import {
 			'display the version number',
 		);
 
-	program.addCommand(monorepoCommand);
-	program.addCommand(initCommand);
-	program.addCommand(nextCommand);
-	program.addCommand(libraryCommand);
-	program.addCommand(generateCommand);
-
+	program.addCommand(skaffoldCommand);
+	program.addCommand(configCommand);
+	program.addCommand(expenseCommand);
+	program.addCommand(invoiceCommand);
+	program.addCommand(reconcileCommand);
+	program.addCommand(storageCommand);
+	program.addCommand(dashboardCommand);
+	program.addCommand(budgetCommand);
+	program.addCommand(cashflowCommand);
+	program.addCommand(payrollCommand);
 	program.parse(process.argv);
 })();
