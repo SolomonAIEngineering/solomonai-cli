@@ -2,13 +2,7 @@
 import { Command } from 'commander';
 import { packageJSON } from 'utils/packageJson.ts';
 import { renderTitle } from 'utils/renderTitle.ts';
-import {
-	generateCommand,
-	initCommand,
-	libraryCommand,
-	monorepoCommand,
-	nextCommand,
-} from './commands';
+import { configCommand, skaffoldCommand } from './commands';
 
 (async () => {
 	renderTitle();
@@ -26,11 +20,8 @@ import {
 			'display the version number',
 		);
 
-	program.addCommand(monorepoCommand);
-	program.addCommand(initCommand);
-	program.addCommand(nextCommand);
-	program.addCommand(libraryCommand);
-	program.addCommand(generateCommand);
+	program.addCommand(skaffoldCommand);
+	program.addCommand(configCommand);
 
 	program.parse(process.argv);
 })();

@@ -1,6 +1,6 @@
 import { Command } from 'commander';
-import { checkMacPrerequisites } from '../utils/checkPrerequisites';
-import { logger } from '../utils/logger';
+import { checkMacPrerequisites } from '../../utils/checkPrerequisites';
+import { logger } from '../../utils/logger';
 
 const TEMPLATES = {
 	nextForge: {

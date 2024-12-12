@@ -1,5 +1,2 @@
-export * from './init.ts';
-export * from './monorepo.ts';
-export * from './next.ts';
-export * from './library.ts';
-export * from './generate.ts';
+export * from './skaffold.ts';
+export * from './config.ts';
