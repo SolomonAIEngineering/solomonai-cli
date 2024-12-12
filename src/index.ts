@@ -2,7 +2,7 @@
 import { Command } from 'commander';
 import { packageJSON } from 'utils/packageJson.ts';
 import { renderTitle } from 'utils/renderTitle.ts';
-import { configCommand, skaffoldCommand } from './commands';
+import { configCommand, invoiceCommand, skaffoldCommand } from './commands';
 
 (async () => {
 	renderTitle();
@@ -22,6 +22,7 @@ import { configCommand, skaffoldCommand } from './commands';
 
 	program.addCommand(skaffoldCommand);
 	program.addCommand(configCommand);
+	program.addCommand(invoiceCommand);
 
 	program.parse(process.argv);
 })();
