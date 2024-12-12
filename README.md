@@ -1,8 +1,6 @@
 <div align="center" width="100%">
-    <img src="./logo.svg" width="128" alt="" />
+    <img src="./logo.svg" width="128" alt="" /><h1 align="center">♨️ Solomon CLI</h1>
 </div>
-
-<h1 align="center">♨️ Solomon CLI</h1>
 
 ---
 
