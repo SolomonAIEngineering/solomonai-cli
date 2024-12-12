@@ -3,8 +3,13 @@ import { Command } from 'commander';
 import { packageJSON } from 'utils/packageJson.ts';
 import { renderTitle } from 'utils/renderTitle.ts';
 import {
+	budgetCommand,
+	cashflowCommand,
 	configCommand,
+	dashboardCommand,
+	expenseCommand,
 	invoiceCommand,
+	payrollCommand,
 	reconcileCommand,
 	skaffoldCommand,
 	storageCommand,
@@ -28,8 +33,13 @@ import {
 
 	program.addCommand(skaffoldCommand);
 	program.addCommand(configCommand);
+	program.addCommand(expenseCommand);
 	program.addCommand(invoiceCommand);
 	program.addCommand(reconcileCommand);
 	program.addCommand(storageCommand);
+	program.addCommand(dashboardCommand);
+	program.addCommand(budgetCommand);
+	program.addCommand(cashflowCommand);
+	program.addCommand(payrollCommand);
 	program.parse(process.argv);
 })();
