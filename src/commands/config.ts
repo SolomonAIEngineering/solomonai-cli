@@ -1,14 +1,23 @@
 import { Command } from 'commander';
+import { auditCommand } from './config/audit';
+import { environmentCommand } from './config/environment';
 import { exportCommand } from './config/export.ts';
 import { getCommand } from './config/get.ts';
 import { importCommand } from './config/import.ts';
 import { listCommand } from './config/list.ts';
+import { lockCommand, unlockCommand } from './config/lock';
+import { pluginCommand } from './config/plugin';
 import { profileCommand } from './config/profile.ts';
 import { removeCommand } from './config/remove.ts';
 import { resetCommand } from './config/reset.ts';
+import { schemaCommand } from './config/schema';
+import { secretCommand } from './config/secret';
 import { setCommand } from './config/set.ts';
 import { showCommand } from './config/show.ts';
+import { teamCommand } from './config/team';
 import { CONFIG_DESCRIPTIONS, CONFIG_KEYS } from './config/types.ts';
+import { vaultCommand } from './config/vault';
+import { whoamiCommand } from './config/whoami';
 
 export const configCommand = new Command()
 	.name('config')
@@ -22,6 +31,16 @@ export const configCommand = new Command()
 	.addCommand(showCommand)
 	.addCommand(exportCommand)
 	.addCommand(importCommand)
+	.addCommand(environmentCommand)
+	.addCommand(secretCommand)
+	.addCommand(schemaCommand)
+	.addCommand(vaultCommand)
+	.addCommand(teamCommand)
+	.addCommand(auditCommand)
+	.addCommand(lockCommand)
+	.addCommand(unlockCommand)
+	.addCommand(whoamiCommand)
+	.addCommand(pluginCommand)
 	.addHelpText(
 		'after',
 		`
