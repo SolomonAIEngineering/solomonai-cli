@@ -2,7 +2,12 @@
 import { Command } from 'commander';
 import { packageJSON } from 'utils/packageJson.ts';
 import { renderTitle } from 'utils/renderTitle.ts';
-import { configCommand, invoiceCommand, skaffoldCommand } from './commands';
+import {
+	configCommand,
+	invoiceCommand,
+	reconcileCommand,
+	skaffoldCommand,
+} from './commands';
 
 (async () => {
 	renderTitle();
@@ -23,6 +28,6 @@ import { configCommand, invoiceCommand, skaffoldCommand } from './commands';
 	program.addCommand(skaffoldCommand);
 	program.addCommand(configCommand);
 	program.addCommand(invoiceCommand);
-
+	program.addCommand(reconcileCommand);
 	program.parse(process.argv);
 })();
