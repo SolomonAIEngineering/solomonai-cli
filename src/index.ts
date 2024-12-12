@@ -7,6 +7,7 @@ import {
 	invoiceCommand,
 	reconcileCommand,
 	skaffoldCommand,
+	storageCommand,
 } from './commands';
 
 (async () => {
@@ -29,5 +30,6 @@ import {
 	program.addCommand(configCommand);
 	program.addCommand(invoiceCommand);
 	program.addCommand(reconcileCommand);
+	program.addCommand(storageCommand);
 	program.parse(process.argv);
 })();
