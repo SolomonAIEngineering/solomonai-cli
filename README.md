@@ -1,23 +1,55 @@
-<h1 align="center">♨️ Solomon CLI</h1>
-
-<p align="center">
-  <strong>
-    A comprehensive CLI platform that unifies development and financial operations. Solomon CLI empowers teams with:
-    • Full-stack development tools for Next.js apps, React libraries, and Turborepo monorepos
-    • Enterprise financial management with budgeting, expense tracking, and automated reconciliation
-    • Advanced cash flow analysis, forecasting, and stress testing
-    • Real-time financial dashboards and reporting
-    • Automated payroll processing and compliance
-    • Secure document storage and team collaboration
-    All powered by modern tooling and industry best practices, enabling organizations to streamline both their development and financial workflows.
-  </strong>
-</p>
-
-<div align="center">
-  <img src="https://img.shields.io/github/license/boilertown/node-cli-boilerplate?style=flat-square" alt="MIT license" >
+<div align="center" width="100%">
+    <img src="./logo.svg" width="128" alt="" />
 </div>
 
+<h1 align="center">♨️ Solomon CLI</h1>
+
+A comprehensive CLI platform that unifies development and financial operations. Solomon CLI empowers teams with:
+
+- Full-stack development tools for Next.js apps, React libraries, and Turborepo monorepos
+- Enterprise financial management with budgeting, expense tracking, and automated reconciliation
+- Advanced cash flow analysis, forecasting, and stress testing
+- Real-time financial dashboards and reporting
+- Automated payroll processing and compliance
+- Secure document storage and team collaboration
+
+All powered by modern tooling and industry best practices, enabling organizations to streamline both their development and financial workflows.
+
 ---
+
+```bash
+
+ ____            ___                                            ____     __     ______
+/\  _`\         /\_ \                                          /\  _`\  /\ \   /\__  _\
+\ \,\L\_\    ___\//\ \     ___     ___ ___     ___     ___     \ \ \/\_\\ \ \  \/_/\ \/
+ \/_\__ \   / __`\\ \ \   / __`\ /' __` __`\  / __`\ /' _ `\    \ \ \/_/_\ \ \  __\ \ \
+   /\ \L\ \/\ \L\ \\_\ \_/\ \L\ \/\ \/\ \/\ \/\ \L\ \/\ \/\ \    \ \ \L\ \\ \ \L\ \\_\ \__
+   \ `\____\ \____//\____\ \____/\ \_\ \_\ \_\ \____/\ \_\ \_\    \ \____/ \ \____//\_____\
+    \/_____/\/___/ \/____/\/___/  \/_/\/_/\/_/\/___/  \/_/\/_/     \/___/   \/___/ \/_____/
+
+
+
+Usage: Solomon CLI [options] [command]
+
+⚡️ Unify development and financial operations.
+
+Options:
+  -v, --version   display the version number
+  -h, --help      display help for command
+
+Commands:
+  skaffold        Scaffold various project types and components
+  config          Manage CLI configuration and settings
+  expense         Track and manage expenses
+  invoice         Manage invoices and billing
+  reconcile       Reconcile financial records and manage exceptions
+  storage         Manage document storage and organization
+  dashboard       Financial overview and analytics dashboard
+  budget          Budget management and financial forecasting
+  cashflow        Manage and analyze cash flow
+  payroll         Manage payroll processing and reporting
+  help [command]  display help for command
+```
 
 ## Introduction
 
